@@ -4,7 +4,7 @@
 #
 Name     : pypi-meson_python
 Version  : 0.8.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Summary  : Meson Python build backend (PEP 517)
@@ -13,6 +13,7 @@ License  : MIT
 Requires: pypi-meson_python-license = %{version}-%{release}
 Requires: pypi-meson_python-python = %{version}-%{release}
 Requires: pypi-meson_python-python3 = %{version}-%{release}
+Requires: ninja
 BuildRequires : buildreq-distutils3
 BuildRequires : buildreq-meson
 BuildRequires : pypi(meson)
@@ -66,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1660267916
+export SOURCE_DATE_EPOCH=1660279364
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
