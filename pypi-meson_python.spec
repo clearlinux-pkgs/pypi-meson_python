@@ -4,7 +4,7 @@
 #
 Name     : pypi-meson_python
 Version  : 0.8.1
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Summary  : Meson Python build backend (PEP 517)
