@@ -4,7 +4,7 @@
 #
 Name     : pypi-meson_python
 Version  : 0.8.1
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c3/94/957a04750188722d09ade6ae3731b115366177faee32ace175c3ca59358b/meson_python-0.8.1.tar.gz
 Summary  : Meson Python build backend (PEP 517)
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1661285187
+export SOURCE_DATE_EPOCH=1661358297
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -92,7 +92,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-meson_python
-cp %{_builddir}/meson_python-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-meson_python/bd79060eebf1013a670a70a31e15b6bc53b02cd8
+cp %{_builddir}/meson_python-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-meson_python/bd79060eebf1013a670a70a31e15b6bc53b02cd8 || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
