@@ -1,5 +1,5 @@
 PKG_NAME := pypi-meson_python
-URL = https://files.pythonhosted.org/packages/4a/ba/2ac2ba7b8e15c2d5ff7822e8a0bd5e777f5f5d7117d898efe478eee0dc9e/meson_python-0.9.0.tar.gz
+URL = https://files.pythonhosted.org/packages/ee/96/5143db2524a4400db85f9ab5c11a1cc853b6770c316ecc81798877144c15/meson_python-0.10.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
