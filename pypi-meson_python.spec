@@ -6,7 +6,7 @@
 #
 Name     : pypi-meson_python
 Version  : 0.10.0
-Release  : 47
+Release  : 48
 URL      : https://files.pythonhosted.org/packages/ee/96/5143db2524a4400db85f9ab5c11a1cc853b6770c316ecc81798877144c15/meson_python-0.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/96/5143db2524a4400db85f9ab5c11a1cc853b6770c316ecc81798877144c15/meson_python-0.10.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/ee/96/5143db2524a4400db85f9ab5c11a1cc853b6770c316ecc81798877144c15/meson_python-0.10.0.tar.gz.asc
@@ -23,6 +23,7 @@ BuildRequires : pypi(meson)
 BuildRequires : pypi(ninja)
 BuildRequires : pypi(pyproject_metadata)
 BuildRequires : pypi(tomli)
+Patch1: deps.patch
 
 %description
 # meson-python [![PyPI version](https://badge.fury.io/py/meson-python.svg)](https://pypi.org/project/meson-python/)
@@ -61,6 +62,7 @@ python3 components for the pypi-meson_python package.
 %prep
 %setup -q -n meson_python-0.10.0
 cd %{_builddir}/meson_python-0.10.0
+%patch1 -p1
 pushd ..
 cp -a meson_python-0.10.0 buildavx2
 popd
@@ -70,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1666792683
+export SOURCE_DATE_EPOCH=1666799153
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

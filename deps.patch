@@ -1,0 +1,20 @@
+--- meson_python-0.10.0/PKG-INFO~	1970-01-01 00:00:00.000000000 +0000
++++ meson_python-0.10.0/PKG-INFO	2022-10-26 15:44:34.434987139 +0000
+@@ -35,7 +35,6 @@
+ Requires-Python: >=3.7
+ Requires-Dist: colorama; os_name == "nt"
+ Requires-Dist: meson>=0.62.0
+-Requires-Dist: ninja
+ Requires-Dist: pyproject-metadata>=0.5.0
+ Requires-Dist: tomli>=1.0.0
+ Requires-Dist: typing-extensions>=3.7.4; python_version < "3.8"
+--- meson_python-0.10.0/pyproject.toml~	1970-01-01 00:00:00.000000000 +0000
++++ meson_python-0.10.0/pyproject.toml	2022-10-26 15:44:51.269874435 +0000
+@@ -3,7 +3,6 @@
+ backend-path = ['.']
+ requires = [
+   'meson>=0.63.0',
+-  'ninja',
+   'pyproject-metadata>=0.5.0',
+   'tomli>=1.0.0',
+   'typing-extensions>=3.7.4; python_version<"3.8"',
