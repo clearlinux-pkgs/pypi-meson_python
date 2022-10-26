@@ -18,3 +18,13 @@
    'pyproject-metadata>=0.5.0',
    'tomli>=1.0.0',
    'typing-extensions>=3.7.4; python_version<"3.8"',
+--- meson_python-0.10.0/pyproject.toml~	2022-10-26 15:44:51.000000000 +0000
++++ meson_python-0.10.0/pyproject.toml	2022-10-26 16:06:17.963741661 +0000
+@@ -26,7 +26,6 @@
+ dependencies = [
+   'colorama; os_name == "nt"',
+   'meson>=0.62.0',
+-  'ninja',
+   'pyproject-metadata>=0.5.0', # not a hard dependency, only needed for projects that use PEP 621 metadata
+   'tomli>=1.0.0',
+   'typing-extensions>=3.7.4; python_version<"3.8"',
