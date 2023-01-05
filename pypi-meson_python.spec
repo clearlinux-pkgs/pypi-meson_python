@@ -6,7 +6,7 @@
 #
 Name     : pypi-meson_python
 Version  : 0.12.0
-Release  : 51
+Release  : 52
 URL      : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz.asc
