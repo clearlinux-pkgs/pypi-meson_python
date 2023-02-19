@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xF893C674816AA95D (lains@archlinux.org)
 #
 Name     : pypi-meson_python
-Version  : 0.12.0
-Release  : 52
-URL      : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/09/51/600a029573c775081d5145fd1b09d22a8d9e73671d84792534f491f38fef/meson_python-0.12.0.tar.gz.asc
+Version  : 0.12.1
+Release  : 53
+URL      : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz.asc
 Summary  : Meson Python build backend (PEP 517)
 Group    : Development/Tools
 License  : MIT
@@ -59,10 +59,10 @@ python3 components for the pypi-meson_python package.
 
 
 %prep
-%setup -q -n meson_python-0.12.0
-cd %{_builddir}/meson_python-0.12.0
+%setup -q -n meson_python-0.12.1
+cd %{_builddir}/meson_python-0.12.1
 pushd ..
-cp -a meson_python-0.12.0 buildavx2
+cp -a meson_python-0.12.1 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1672289640
+export SOURCE_DATE_EPOCH=1676770097
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
