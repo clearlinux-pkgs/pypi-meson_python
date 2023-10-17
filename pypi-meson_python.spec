@@ -5,11 +5,14 @@
 # autospec version: v2
 # autospec commit: f032afc
 #
+# Source0 file verified with key 0xF893C674816AA95D (lains@archlinux.org)
+#
 Name     : pypi-meson_python
-Version  : 0.14.0
-Release  : 56
-URL      : https://files.pythonhosted.org/packages/38/a7/ddc350902a1b3b960db8d0e501f61468f925f994e0b4e6d696aeb6a75c00/meson_python-0.14.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/38/a7/ddc350902a1b3b960db8d0e501f61468f925f994e0b4e6d696aeb6a75c00/meson_python-0.14.0.tar.gz
+Version  : 0.12.1
+Release  : 57
+URL      : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/c0/e1/26533e0a66be3ad44f3de8499f5e55fe317ec0d3d9dd05a743a6930e9293/meson_python-0.12.1.tar.gz.asc
 Summary  : Meson Python build backend (PEP 517)
 Group    : Development/Tools
 License  : MIT
@@ -21,23 +24,12 @@ BuildRequires : buildreq-distutils3
 BuildRequires : meson
 BuildRequires : pypi(meson)
 BuildRequires : pypi(pyproject_metadata)
-BuildRequires : pypi(setuptools)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
 
 %description
-.. SPDX-License-Identifier: MIT
-meson-python
-============
-``meson-python`` is a Python build backend built on top of the Meson__
-build system. It enables to use Meson for the configuration and build
-steps of Python packages. Meson is an open source build system meant
-to be both extremely fast, and, even more importantly, as user
-friendly as possible. ``meson-python`` is best suited for building
-Python packages containing extension modules implemented in languages
-such as C, C++, Cython, Fortran, Pythran, or Rust. Consult the
-documentation__ for more details.
+# meson-python [![PyPI version](https://badge.fury.io/py/meson-python.svg)](https://pypi.org/project/meson-python/)
 
 %package license
 Summary: license components for the pypi-meson_python package.
@@ -70,10 +62,10 @@ python3 components for the pypi-meson_python package.
 
 
 %prep
-%setup -q -n meson_python-0.14.0
-cd %{_builddir}/meson_python-0.14.0
+%setup -q -n meson_python-0.12.1
+cd %{_builddir}/meson_python-0.12.1
 pushd ..
-cp -a meson_python-0.14.0 buildavx2
+cp -a meson_python-0.12.1 buildavx2
 popd
 
 %build
@@ -81,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1697557709
+export SOURCE_DATE_EPOCH=1697563882
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -127,7 +119,6 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-meson_python
 cp %{_builddir}/meson_python-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-meson_python/d35307a363044e8931785c522493cbde4429981a || :
-cp %{_builddir}/meson_python-%{version}/LICENSES/MIT.txt %{buildroot}/usr/share/package-licenses/pypi-meson_python/d35307a363044e8931785c522493cbde4429981a || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
