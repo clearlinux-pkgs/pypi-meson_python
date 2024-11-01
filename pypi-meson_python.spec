@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-meson_python
-Version  : 0.17.0
-Release  : 64
-URL      : https://files.pythonhosted.org/packages/72/ea/a7895f15512cae5b3b5be988d38531ad3be74b06f56f0cdcee3ffcf86108/meson_python-0.17.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/72/ea/a7895f15512cae5b3b5be988d38531ad3be74b06f56f0cdcee3ffcf86108/meson_python-0.17.0.tar.gz
+Version  : 0.17.1
+Release  : 65
+URL      : https://files.pythonhosted.org/packages/67/66/91d242ea8dd1729addd36069318ba2cd03874872764f316c3bb51b633ed2/meson_python-0.17.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/67/66/91d242ea8dd1729addd36069318ba2cd03874872764f316c3bb51b633ed2/meson_python-0.17.1.tar.gz
 Summary  : Meson Python build backend (PEP 517)
 Group    : Development/Tools
 License  : MIT
@@ -71,10 +71,10 @@ python3 components for the pypi-meson_python package.
 
 
 %prep
-%setup -q -n meson_python-0.17.0
-cd %{_builddir}/meson_python-0.17.0
+%setup -q -n meson_python-0.17.1
+cd %{_builddir}/meson_python-0.17.1
 pushd ..
-cp -a meson_python-0.17.0 buildavx2
+cp -a meson_python-0.17.1 buildavx2
 popd
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1729544968
+export SOURCE_DATE_EPOCH=1730421097
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
